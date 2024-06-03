@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dtgljsber44mv"]
+[gd_scene load_steps=11 format=3 uid="uid://brotugfr88pta"]
 
-[ext_resource type="Script" path="res://entities and players/Player/Player_movement.gd" id="1_is4r3"]
+[ext_resource type="Script" path="res://entities and players/Player_movement.gd" id="1_12i1p"]
 [ext_resource type="Texture2D" uid="uid://bhuj5bie820mk" path="res://Sprites/icon.svg" id="2_o2ht3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnrcp"]
@@ -42,7 +42,7 @@ fill_from = Vector2(1, 0)
 [node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_is4r3")
+script = ExtResource("1_12i1p")
 
 [node name="CharSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
