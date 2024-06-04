@@ -26,10 +26,10 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if run:
-		if Input.is_action_just_pressed("Run") and is_on_floor():
+		if Input.is_action_just_pressed("Run"):
 			run = false
 	else:
-		if Input.is_action_just_pressed("Run") and is_on_floor():
+		if Input.is_action_just_pressed("Run"):
 			run = true
 	
 	if direction:
