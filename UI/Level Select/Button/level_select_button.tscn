@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://qtq32mdfv625"]
+
+[ext_resource type="Script" path="res://UI/Level Select/Button/Level_Select.gd" id="1_jjdsg"]
+
+[node name="Level_Select_Button" type="Button"]
+custom_minimum_size = Vector2(93, 93)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1062.0
+offset_bottom = -558.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjdsg")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+custom_minimum_size = Vector2(93, 93)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_colors/font_placeholder_color = Color(1, 1, 0.992157, 1)
+theme_override_font_sizes/font_size = 75
+placeholder_text = "X"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_right = 67.0625
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 75
+placeholder_text = "x"
