@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://r75weilkcti3"]
+[gd_scene load_steps=2 format=3 uid="uid://r75weilkcti3"]
+
+[ext_resource type="PackedScene" uid="uid://qtq32mdfv625" path="res://UI/Level Select/Button/level_select_button.tscn" id="1_g785c"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -13,6 +15,111 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 92.0
+offset_right = 3.0
+offset_bottom = 92.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 6
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 92
+columns = 10
+
+[node name="Level_Select_Button" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "1"
+
+[node name="Level_Select_Button2" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "2"
+
+[node name="Level_Select_Button3" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "3"
+
+[node name="Level_Select_Button4" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "4"
+
+[node name="Level_Select_Button5" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "5"
+
+[node name="Level_Select_Button6" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "6"
+
+[node name="Level_Select_Button7" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "7"
+
+[node name="Level_Select_Button8" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "8"
+
+[node name="Level_Select_Button9" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "9"
+
+[node name="Level_Select_Button10" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+number = "10"
+
+[node name="Level_Select_Button11" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button12" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button13" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button14" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button15" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button16" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button17" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button18" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button19" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button20" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button21" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button22" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button23" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button24" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button25" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button26" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button27" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button28" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button29" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
+
+[node name="Level_Select_Button30" parent="GridContainer" instance=ExtResource("1_g785c")]
+layout_mode = 2
