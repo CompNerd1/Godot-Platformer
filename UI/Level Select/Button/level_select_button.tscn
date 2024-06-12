@@ -1,23 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://qtq32mdfv625"]
+[gd_scene load_steps=3 format=3 uid="uid://qtq32mdfv625"]
 
 [ext_resource type="Script" path="res://UI/Level Select/Button/Level_Select.gd" id="1_jjdsg"]
+[ext_resource type="Script" path="res://UI/Level Select/Button/Button_Text.gd" id="2_uur4h"]
 
 [node name="Level_Select_Button" type="Button"]
+texture_filter = 1
 custom_minimum_size = Vector2(93, 93)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1062.0
-offset_bottom = -558.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -59.0
+offset_right = 47.0
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 80
+clip_text = true
 script = ExtResource("1_jjdsg")
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
 custom_minimum_size = Vector2(93, 93)
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-theme_override_colors/font_placeholder_color = Color(1, 1, 0.992157, 1)
-theme_override_font_sizes/font_size = 75
-placeholder_text = "X"
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -69.5
+offset_right = 47.0
+offset_bottom = 67.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 99
+text = "X"
+horizontal_alignment = 1
+script = ExtResource("2_uur4h")

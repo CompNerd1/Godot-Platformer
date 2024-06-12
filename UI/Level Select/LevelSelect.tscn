@@ -66,60 +66,80 @@ number = "10"
 
 [node name="Level_Select_Button11" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "11"
 
 [node name="Level_Select_Button12" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "12"
 
 [node name="Level_Select_Button13" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "13"
 
 [node name="Level_Select_Button14" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "14"
 
 [node name="Level_Select_Button15" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "15"
 
 [node name="Level_Select_Button16" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "16"
 
 [node name="Level_Select_Button17" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "17"
 
 [node name="Level_Select_Button18" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "18"
 
 [node name="Level_Select_Button19" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "19"
 
 [node name="Level_Select_Button20" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "20"
 
 [node name="Level_Select_Button21" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "21"
 
 [node name="Level_Select_Button22" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "22"
 
 [node name="Level_Select_Button23" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "23"
 
 [node name="Level_Select_Button24" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "24"
 
 [node name="Level_Select_Button25" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "25"
 
 [node name="Level_Select_Button26" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "26"
 
 [node name="Level_Select_Button27" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "27"
 
 [node name="Level_Select_Button28" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "28"
 
 [node name="Level_Select_Button29" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "29"
 
 [node name="Level_Select_Button30" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
+number = "30"
