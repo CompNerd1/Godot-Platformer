@@ -15,14 +15,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 37.5
 offset_top = 92.0
-offset_right = 3.0
+offset_right = 40.5
 offset_bottom = 92.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 25
+theme_override_constants/h_separation = 30
 theme_override_constants/v_separation = 92
-columns = 10
+columns = 9
 
 [node name="Level_Select_Button" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
@@ -131,15 +132,3 @@ number = "26"
 [node name="Level_Select_Button27" parent="GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "27"
-
-[node name="Level_Select_Button28" parent="GridContainer" instance=ExtResource("1_g785c")]
-layout_mode = 2
-number = "28"
-
-[node name="Level_Select_Button29" parent="GridContainer" instance=ExtResource("1_g785c")]
-layout_mode = 2
-number = "29"
-
-[node name="Level_Select_Button30" parent="GridContainer" instance=ExtResource("1_g785c")]
-layout_mode = 2
-number = "30"
