@@ -43,6 +43,7 @@ fill_from = Vector2(1, 0)
 [node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(594, 362)
 script = ExtResource("1_12i1p")
 speed = 80
 run_speed = 130
@@ -71,5 +72,6 @@ rotation = -0.436332
 scale = Vector2(0.256, 0.056)
 texture = SubResource("GradientTexture2D_8t6eg")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
 script = ExtResource("3_xh3sn")
