@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://brotugfr88pta"]
+[gd_scene load_steps=11 format=3 uid="uid://brotugfr88pta"]
 
 [ext_resource type="Script" path="res://entities and players/Player/Player_movement.gd" id="1_12i1p"]
 [ext_resource type="Texture2D" uid="uid://bhuj5bie820mk" path="res://Sprites/icon.svg" id="2_o2ht3"]
-[ext_resource type="Script" path="res://entities and players/Player/Camera_Movement.gd" id="3_xh3sn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnrcp"]
 atlas = ExtResource("2_o2ht3")
@@ -70,6 +69,3 @@ position = Vector2(-21, -37)
 rotation = -0.436332
 scale = Vector2(0.256, 0.056)
 texture = SubResource("GradientTexture2D_8t6eg")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-script = ExtResource("3_xh3sn")
