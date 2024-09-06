@@ -1,6 +1,6 @@
 extends Camera2D
 
-@onready var player = $"../Player"
+@onready var player = get_node("/root/Level1/Player")
 @export var speed = 5
 
 func _physics_process(delta):
