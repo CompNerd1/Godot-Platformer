@@ -9,5 +9,9 @@ var location
 
 func _physics_process(delta):
 	location = player.position.y + player_add.position.y
+	y_level = abs(location) as int / screen_size
 	position.x = lerp(position.x,player.position.x+player_add.position.x,speed*delta)
-	position.y = screen_size / 2
+	if(location > 0):
+		position.y = lerp(position.y, screen_size as float / 2, speed * 2 * delta)
+	else:
+		position.y = lerp(position.y,-(screen_size as float / 2 + (y_level * screen_size)),speed*2*delta)
