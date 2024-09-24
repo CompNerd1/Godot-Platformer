@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://entities and players/Player/Camera_Movement.gd" id="3_g70h7"]
 
 [node name="Level_2" type="Node2D"]
+position = Vector2(0, -3)
 
 [node name="Level" type="TileMap" parent="."]
 texture_filter = 1

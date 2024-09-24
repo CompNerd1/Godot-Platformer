@@ -42,7 +42,6 @@ fill_from = Vector2(1, 0)
 [node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(32.5, 32.5)
 script = ExtResource("1_12i1p")
 speed = 80
 run_speed = 130
@@ -50,24 +49,22 @@ jump_height = 130
 
 [node name="CharSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-position = Vector2(-32.5, -32.5)
 scale = Vector2(0.492188, 0.492188)
 sprite_frames = SubResource("SpriteFrames_skpcp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 visible = false
-position = Vector2(-32.5, -32.5)
 shape = SubResource("RectangleShape2D_6n34k")
 
 [node name="angy1" type="Sprite2D" parent="CharacterBody2D"]
 material = SubResource("CanvasItemMaterial_f5jp2")
-position = Vector2(-44, -37)
+position = Vector2(-11.5, -4.5)
 rotation = 0.436332
 scale = Vector2(0.256157, 0.055577)
 texture = SubResource("GradientTexture2D_jxc1w")
 
 [node name="angy2" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(-21, -37)
+position = Vector2(11.5, -4.5)
 rotation = -0.436332
 scale = Vector2(0.256, 0.056)
 texture = SubResource("GradientTexture2D_8t6eg")
