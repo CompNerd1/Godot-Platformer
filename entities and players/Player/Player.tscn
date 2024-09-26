@@ -39,9 +39,9 @@ colors = PackedColorArray(0, 0.639216, 1, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_rudss")
 fill_from = Vector2(1, 0)
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" groups=["player"]]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 script = ExtResource("1_12i1p")
 speed = 80
 run_speed = 130
@@ -52,7 +52,7 @@ texture_filter = 1
 scale = Vector2(0.492188, 0.492188)
 sprite_frames = SubResource("SpriteFrames_skpcp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" groups=["player"]]
 visible = false
 shape = SubResource("RectangleShape2D_6n34k")
 
