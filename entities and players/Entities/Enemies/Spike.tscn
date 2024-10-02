@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://pxnj0dai88t3"]
+
+[ext_resource type="Texture2D" uid="uid://bxgj3g4g05bi3" path="res://Sprites/Spike.png" id="1_2jpyt"]
+
+[node name="spike" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+polygon = PackedVector2Array(30, 0, 0, -60, -30, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -28)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("1_2jpyt")
