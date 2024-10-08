@@ -7,12 +7,14 @@ const JUMP_VELOCITY = -4.0
 @export var speed: int
 @export var run_speed: int
 @export var jump_height: int
+@export var health: int
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var run = false
 
 func _physics_process(delta):
+	Globals.health = health
 	# Add the gravity.
 	if not is_on_floor():
 		if (velocity.y < -10):

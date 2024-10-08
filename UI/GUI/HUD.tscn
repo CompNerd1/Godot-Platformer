@@ -1,12 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://djc3irnv3ls45"]
+[gd_scene load_steps=3 format=3 uid="uid://djc3irnv3ls45"]
 
 [ext_resource type="Script" path="res://UI/GUI/Double_Idicator.gd" id="1_syj83"]
+[ext_resource type="Script" path="res://UI/GUI/Health.gd" id="2_rovmr"]
 
 [node name="HUD" type="CanvasLayer"]
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="Double Jump" type="TextEdit" parent="."]
 offset_right = 110.0
 offset_bottom = 36.0
 theme_override_colors/background_color = Color(1, 1, 1, 0)
 text = "Double Jump"
 script = ExtResource("1_syj83")
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 1042.0
+offset_right = 1152.0
+offset_bottom = 36.0
+theme_override_colors/background_color = Color(1, 1, 1, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+placeholder_text = "Health: Null"
+script = ExtResource("2_rovmr")

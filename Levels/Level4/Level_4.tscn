@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpajw6cc8yjhf"]
+[gd_scene load_steps=6 format=3 uid="uid://cpajw6cc8yjhf"]
 
 [ext_resource type="TileSet" uid="uid://cm8y75o4mtx7e" path="res://Levels/Level1/Level_1.tres" id="1_414bl"]
 [ext_resource type="PackedScene" uid="uid://brotugfr88pta" path="res://entities and players/Player/Player.tscn" id="2_tmojm"]
 [ext_resource type="Script" path="res://entities and players/Player/Camera_Movement.gd" id="3_l14dr"]
 [ext_resource type="PackedScene" uid="uid://vn5oqdwfpmhg" path="res://Items/Pickup/pickup.tscn" id="4_n5jtd"]
+[ext_resource type="PackedScene" uid="uid://pxnj0dai88t3" path="res://entities and players/Entities/Enemies/Spike.tscn" id="5_5hqns"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -25,3 +26,6 @@ position = Vector2(1420, -682)
 
 [node name="Pickup2" parent="." instance=ExtResource("4_n5jtd")]
 position = Vector2(523, 578)
+
+[node name="spike" parent="." instance=ExtResource("5_5hqns")]
+position = Vector2(669, 620)
