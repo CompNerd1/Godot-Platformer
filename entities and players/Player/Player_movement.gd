@@ -13,8 +13,15 @@ const JUMP_VELOCITY = -4.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var run = false
 
-func _physics_process(delta):
+func _ready() -> void:
 	Globals.health = health
+
+func on_hit():
+	if(velocity.x != 0):
+		velocity.x += (velocity.x / abs(velocity.x)) * 500
+	velocity.y = -500
+
+func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		if (velocity.y < -10):
