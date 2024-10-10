@@ -14,10 +14,10 @@ tile_map_data = PackedByteArray("AAAAACcAAAAAAAAAAAAAACgAAAAAAAEAAAABACcAAAAAAAA
 tile_set = ExtResource("1_jw3n0")
 
 [node name="Player" parent="." instance=ExtResource("2_m2qew")]
-position = Vector2(115, 533)
+position = Vector2(111, 574)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, 324)
+position = Vector2(1114, 177)
 script = ExtResource("3_41lts")
 
 [node name="Pickup" parent="." instance=ExtResource("4_glcyi")]

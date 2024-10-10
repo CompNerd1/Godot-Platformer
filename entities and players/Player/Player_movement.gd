@@ -9,23 +9,15 @@ const JUMP_VELOCITY = -4.0
 @export var jump_height: int
 @export var health: int
 
-func _ready() -> void:
-	Globals.health = health
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var run = false
 
-<<<<<<< HEAD
-func on_hit():
-	velocity.x  = -100
-=======
 func _ready() -> void:
 	Globals.health = health
 
 func on_hit():
-	if(velocity.x != 0):
-		velocity.x += (velocity.x / abs(velocity.x)) * 500
->>>>>>> eb92f52090125bec3f96d4b1aa4010c599a6bd70
+	velocity.x = 500
 	velocity.y = -500
 
 func _physics_process(delta):
