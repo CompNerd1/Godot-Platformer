@@ -7,3 +7,4 @@ var health
 func _process(delta: float) -> void:
 	health = Globals.health
 	text = str(health)
+	print(Globals.health)

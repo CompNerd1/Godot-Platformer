@@ -11,7 +11,7 @@ self_modulate = Color(1, 0, 0, 1)
 polygon = PackedVector2Array(30, 0, 0, -60, -30, 0)
 script = ExtResource("1_cfd8u")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["spike"]]
 texture_filter = 1
 position = Vector2(0, -28)
 scale = Vector2(1.75, 1.75)
