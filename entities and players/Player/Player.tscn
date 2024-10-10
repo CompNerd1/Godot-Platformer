@@ -44,10 +44,13 @@ fill_from = Vector2(1, 0)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Enemy", "player"]]
 script = ExtResource("1_12i1p")
-speed = 80
-run_speed = 130
-jump_height = 130
+acceleration = 100
+run_acceleration = 500
+max_speed = 500
+max_run_speed = 1000
+jump_speed = 150
 health = 100
+friction = 30
 
 [node name="CharSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
@@ -71,3 +74,8 @@ scale = Vector2(0.256, 0.056)
 texture = SubResource("GradientTexture2D_8t6eg")
 
 [node name="HUD" parent="CharacterBody2D" instance=ExtResource("3_nr4j8")]
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+wait_time = 1.5
+
+[connection signal="timeout" from="CharacterBody2D/Timer" to="CharacterBody2D" method="_on_timer_timeout"]
