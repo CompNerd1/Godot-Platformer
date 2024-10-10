@@ -17,8 +17,8 @@ func _ready() -> void:
 	Globals.health = health
 
 func on_hit():
-	velocity.x = 500
-	velocity.y = -500
+	velocity.x = 5000
+	velocity.y = -5000
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -30,10 +30,10 @@ func _physics_process(delta):
 	
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY * jump_height
+		velocity.y += JUMP_VELOCITY * jump_height
 	
 	if Input.is_action_just_pressed("ui_accept") and !is_on_floor() and Globals.power_up:
-		velocity.y = JUMP_VELOCITY * jump_height
+		velocity.y += JUMP_VELOCITY * jump_height
 		Globals.power_up = false
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -48,11 +48,11 @@ func _physics_process(delta):
 	
 	if direction:
 		if run:
-			velocity.x = direction * SPEED_CONST * run_speed
+			velocity.x += direction * SPEED_CONST * run_speed
 		else:
-			velocity.x = direction * SPEED_CONST * speed
+			velocity.x += direction * SPEED_CONST * speed
 		
 	else:
-		velocity.x = move_toward(velocity.x, 0, SLOW_DOWN)
+		velocity.x += move_toward(velocity.x, 0, SLOW_DOWN)
 	
 	move_and_slide()
