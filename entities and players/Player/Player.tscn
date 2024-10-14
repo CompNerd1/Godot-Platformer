@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://brotugfr88pta"]
 
 [ext_resource type="Script" path="res://entities and players/Player/Player_movement.gd" id="1_12i1p"]
-[ext_resource type="Texture2D" uid="uid://bhuj5bie820mk" path="res://Sprites/icon.svg" id="2_o2ht3"]
+[ext_resource type="Texture2D" uid="uid://c8xhhufedibml" path="res://Sprites/icon.svg" id="2_o2ht3"]
 [ext_resource type="PackedScene" uid="uid://djc3irnv3ls45" path="res://UI/GUI/HUD.tscn" id="3_nr4j8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnrcp"]

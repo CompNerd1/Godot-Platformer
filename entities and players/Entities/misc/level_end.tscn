@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcelurtm3jheq"]
+
+[ext_resource type="Texture2D" uid="uid://yevh2oni84to" path="res://Sprites/end.png" id="1_wmf5y"]
+[ext_resource type="Script" path="res://entities and players/Entities/misc/end_level.gd" id="2_dn48k"]
+[ext_resource type="PackedScene" uid="uid://r75weilkcti3" path="res://UI/Level Select/LevelSelect.tscn" id="3_305xr"]
+
+[node name="Level End" type="Area2D" groups=["player"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_wmf5y")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=["player"]]
+scale = Vector2(2, 2)
+build_mode = 1
+polygon = PackedVector2Array(-16, 16, -16, -4, -13, -10, -9, -14, 0, -16, 9, -14, 13, -10, 16, -4, 16, 16)
+script = ExtResource("2_dn48k")
+load = ExtResource("3_305xr")
+
+[connection signal="body_entered" from="." to="CollisionPolygon2D" method="_on_node_2d_body_entered"]

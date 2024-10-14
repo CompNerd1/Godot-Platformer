@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Globals="*res://Global_Var.gd"
 
+[global_group]
+
+player=""
+
 [input]
 
 ui_left={

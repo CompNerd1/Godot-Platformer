@@ -71,15 +71,17 @@ func _physics_process(delta):
 	#friction
 	if not Input.is_action_pressed("ui_right"):
 		if not Input.is_action_pressed("ui_left"):
-			if abs(velocity.x) < friction:
-				velocity.x = 0
 			if is_on_floor():
 				if !run:
+					if abs(velocity.x) <= abs(friction):
+						velocity.x = 0
 					if velocity.x > 0:
 						velocity.x -= friction
 					if velocity.x < 0:
 						velocity.x += friction
 				else:
+					if abs(velocity.x) <= abs(friction * 2.5):
+						velocity.x = 0
 					if velocity.x > 0:
 						velocity.x -= friction * 2.5
 					if velocity.x < 0:
@@ -89,5 +91,5 @@ func _physics_process(delta):
 					velocity.x -= friction / 1.25
 				if velocity.x < 0:
 					velocity.x += friction / 1.25
-	print(position)
+	
 	move_and_slide()
