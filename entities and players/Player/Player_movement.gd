@@ -81,9 +81,9 @@ func _physics_process(delta):
 						velocity.x += friction
 				else:
 					if velocity.x > 0:
-						velocity.x -= friction * 1.5
+						velocity.x -= friction * 2.5
 					if velocity.x < 0:
-						velocity.x += friction * 1.5
+						velocity.x += friction * 2.5
 			else:
 				if velocity.x > 0:
 					velocity.x -= friction / 1.25
