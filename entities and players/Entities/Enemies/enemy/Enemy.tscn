@@ -1,7 +1,15 @@
-[gd_scene format=3 uid="uid://0qio70txd30p"]
+[gd_scene load_steps=3 format=3 uid="uid://rxut1oyiulrw"]
 
-[node name="Enemy" type="Area2D"]
+[ext_resource type="Texture2D" uid="uid://knte5bcv2ovw" path="res://Sprites/Enemy.png" id="1_4oqpg"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2y8c"]
+size = Vector2(32, 32)
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionPolygon2D"]
+[node name="Enemy" type="Area2D" groups=["player"]]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="." groups=["player"]]
+shape = SubResource("RectangleShape2D_k2y8c")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionPolygon2D" groups=["player"]]
+texture_filter = 1
+texture = ExtResource("1_4oqpg")
