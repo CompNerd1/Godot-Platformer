@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
-const JUMP_VELOCITY = -4
+const JUMP_VELOCITY = -1
 
-@export var acceleration: int
+@export var acceleration: float
 @export var max_speed: int
 @export var max_run_speed: int
-@export var jump_speed: int
+@export var jump_speed: float
 @export var health: int
-@export var friction: int
+@export var friction: float
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -87,9 +87,11 @@ func _physics_process(delta):
 					if velocity.x < 0:
 						velocity.x += friction * 2.5
 			else:
+				if abs(velocity.x) <= friction / 1.25:
+					velocity.x = 0 
 				if velocity.x > 0:
-					velocity.x -= friction / 1.25
+					velocity.x -= friction / 1.125
 				if velocity.x < 0:
-					velocity.x += friction / 1.25
+					velocity.x += friction / 1.125
 	
 	move_and_slide()

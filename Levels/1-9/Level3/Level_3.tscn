@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://crlwptymbyhub"]
+[gd_scene load_steps=6 format=4 uid="uid://crlwptymbyhub"]
 
 [ext_resource type="TileSet" uid="uid://cm8y75o4mtx7e" path="res://Levels/Level1/Level_1.tres" id="1_jw3n0"]
 [ext_resource type="PackedScene" uid="uid://brotugfr88pta" path="res://entities and players/Player/Player.tscn" id="2_m2qew"]
 [ext_resource type="Script" path="res://entities and players/Player/Camera_Movement.gd" id="3_41lts"]
 [ext_resource type="PackedScene" uid="uid://vn5oqdwfpmhg" path="res://Items/Pickup/pickup.tscn" id="4_glcyi"]
+[ext_resource type="PackedScene" uid="uid://dcelurtm3jheq" path="res://entities and players/Entities/misc/level_end.tscn" id="5_47exe"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -22,3 +23,6 @@ script = ExtResource("3_41lts")
 
 [node name="Pickup" parent="." instance=ExtResource("4_glcyi")]
 position = Vector2(1420, -682)
+
+[node name="Level End" parent="." instance=ExtResource("5_47exe")]
+position = Vector2(2137, -688)
