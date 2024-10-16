@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://pxnj0dai88t3"]
 
-[ext_resource type="Texture2D" uid="uid://d2k8es6td6bj4" path="res://Sprites/Spike.png" id="1_2jpyt"]
+[ext_resource type="Texture2D" uid="uid://by5wjkn10w2jr" path="res://Sprites/Spike.png" id="1_2jpyt"]
 [ext_resource type="Script" path="res://entities and players/Entities/Enemies/spike.gd" id="1_cfd8u"]
 
 [node name="spike" type="Area2D"]
