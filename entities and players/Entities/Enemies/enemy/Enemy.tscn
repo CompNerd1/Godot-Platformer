@@ -1,15 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://rxut1oyiulrw"]
+[gd_scene load_steps=5 format=3 uid="uid://rxut1oyiulrw"]
 
 [ext_resource type="Texture2D" uid="uid://knte5bcv2ovw" path="res://Sprites/Enemy.png" id="1_4oqpg"]
+[ext_resource type="Script" path="res://entities and players/Entities/Enemies/enemy/enemy.gd" id="1_djvm3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2y8c"]
 size = Vector2(32, 32)
 
-[node name="Enemy" type="Area2D" groups=["player"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hg8p"]
+size = Vector2(30.6667, 30)
 
-[node name="CollisionPolygon2D" type="CollisionShape2D" parent="." groups=["player"]]
+[node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_djvm3")
+speed = 500
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_k2y8c")
 
-[node name="Sprite2D" type="Sprite2D" parent="CollisionPolygon2D" groups=["player"]]
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/Collision"]
 texture_filter = 1
 texture = ExtResource("1_4oqpg")
+
+[node name="Movement_Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5hg8p")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
