@@ -1,18 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://rxut1oyiulrw"]
+[gd_scene load_steps=8 format=3 uid="uid://rxut1oyiulrw"]
 
 [ext_resource type="Texture2D" uid="uid://knte5bcv2ovw" path="res://Sprites/Enemy.png" id="1_4oqpg"]
 [ext_resource type="Script" path="res://entities and players/Entities/Enemies/enemy/enemy.gd" id="1_djvm3"]
+[ext_resource type="Script" path="res://entities and players/Entities/Enemies/enemy/Enemy_Flip.gd" id="3_mc8yn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2y8c"]
 size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hg8p"]
-size = Vector2(30.6667, 30)
+size = Vector2(6, 30.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixprj"]
+size = Vector2(6, 30.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6on5"]
+size = Vector2(9.33333, 1.33333)
 
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_djvm3")
-speed = 500
+speed = 200
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -23,7 +30,23 @@ shape = SubResource("RectangleShape2D_k2y8c")
 texture_filter = 1
 texture = ExtResource("1_4oqpg")
 
-[node name="Movement_Collision" type="CollisionShape2D" parent="."]
+[node name="Right_Collision" type="Area2D" parent="."]
+
+[node name="Right_Collision_Box" type="CollisionShape2D" parent="Right_Collision"]
+position = Vector2(-13, 0)
 shape = SubResource("RectangleShape2D_5hg8p")
+script = ExtResource("3_mc8yn")
+
+[node name="Left_Collision" type="Area2D" parent="."]
+
+[node name="Left_Collision_Box" type="CollisionShape2D" parent="Left_Collision"]
+position = Vector2(13, 0)
+shape = SubResource("RectangleShape2D_ixprj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15.3333)
+shape = SubResource("RectangleShape2D_r6on5")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Right_Collision" to="Right_Collision/Right_Collision_Box" method="_on_right_collision_body_entered"]
+[connection signal="body_entered" from="Left_Collision" to="Right_Collision/Right_Collision_Box" method="_on_left_collision_body_entered"]

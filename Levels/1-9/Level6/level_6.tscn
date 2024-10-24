@@ -21,4 +21,4 @@ position = Vector2(0, 324)
 script = ExtResource("3_6gfkk")
 
 [node name="Enemy" parent="." instance=ExtResource("4_pajl3")]
-position = Vector2(841, 584)
+position = Vector2(328, 571)
