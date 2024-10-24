@@ -13,3 +13,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("player")):
 		body.on_hit()
 		Globals.health -= 10
+
+
+func _on_right_collision_body_entered(body: Node2D) -> void:
+	get_node(".").direction *= -1
+
+
+func _on_left_collision_body_entered(body: Node2D) -> void:
+	get_node(".").direction *= -1
