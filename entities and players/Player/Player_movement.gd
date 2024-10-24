@@ -20,6 +20,9 @@ var run = false
 func _ready() -> void:
 	Globals.health = health
 
+func enemy_on_hit(x_velocity: float):
+	if velocity.x == 0:
+		velocity.x = (abs(x_velocity) / x_velocity) * 500
 
 func on_hit():
 	if velocity.x != 0:
