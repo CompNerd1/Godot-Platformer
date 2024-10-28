@@ -1,18 +1,82 @@
-[gd_scene load_steps=12 format=3 uid="uid://brotugfr88pta"]
+[gd_scene load_steps=28 format=3 uid="uid://brotugfr88pta"]
 
 [ext_resource type="Script" path="res://entities and players/Player/Player_movement.gd" id="1_12i1p"]
-[ext_resource type="Texture2D" uid="uid://bqaeis0wj5jpm" path="res://Sprites/icon.svg" id="2_o2ht3"]
+[ext_resource type="Texture2D" uid="uid://bik3x5q18fo6n" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_dead.png" id="2_asg7d"]
+[ext_resource type="Texture2D" uid="uid://btxkiun4am6gv" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_duck.png" id="3_47cfn"]
 [ext_resource type="PackedScene" uid="uid://djc3irnv3ls45" path="res://UI/GUI/HUD.tscn" id="3_nr4j8"]
+[ext_resource type="Texture2D" uid="uid://cdgcgrbqu4p5n" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_fall.png" id="4_0bgbr"]
+[ext_resource type="Texture2D" uid="uid://brkoxo8ltkvmu" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_hit.png" id="5_whtps"]
+[ext_resource type="Texture2D" uid="uid://dp26lw23lbapb" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_roll.png" id="6_kc0ju"]
+[ext_resource type="Texture2D" uid="uid://c5ft6y2gxh2v6" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_stand.png" id="7_aubvf"]
+[ext_resource type="Texture2D" uid="uid://sltqqop86uo8" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_swim1.png" id="8_h5vk6"]
+[ext_resource type="Texture2D" uid="uid://c005unihrwuju" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_swim2.png" id="9_iaffp"]
+[ext_resource type="Texture2D" uid="uid://4gdjqipdou87" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_switch1.png" id="10_jh11e"]
+[ext_resource type="Texture2D" uid="uid://dxhty4afl78ki" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_switch2.png" id="11_1d5hf"]
+[ext_resource type="Texture2D" uid="uid://dc73tyvagcnjf" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_up1.png" id="12_jl4yb"]
+[ext_resource type="Texture2D" uid="uid://bvu16s58dw7q0" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_up2.png" id="13_73kti"]
+[ext_resource type="Texture2D" uid="uid://bjdy60s61vhn0" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_up3.png" id="14_fl27e"]
+[ext_resource type="Texture2D" uid="uid://cpeir86o1e7ey" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk1.png" id="15_ailqp"]
+[ext_resource type="Texture2D" uid="uid://dd5trowunjtpp" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk2.png" id="16_73oyi"]
+[ext_resource type="Texture2D" uid="uid://eatioaw2b33h" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk3.png" id="17_4mlqw"]
+[ext_resource type="Texture2D" uid="uid://daoa0sm8t52mu" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk4.png" id="18_0jn8o"]
+[ext_resource type="Texture2D" uid="uid://d120r4ykfogab" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk5.png" id="19_gu7xg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mnrcp"]
-atlas = ExtResource("2_o2ht3")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_skpcp"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_fgs4f"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mnrcp")
+"texture": ExtResource("2_asg7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_47cfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0bgbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_whtps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kc0ju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aubvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h5vk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iaffp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jh11e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1d5hf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jl4yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_73kti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fl27e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ailqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_73oyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4mlqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0jn8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gu7xg")
 }],
 "loop": true,
 "name": &"default",
@@ -20,7 +84,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6n34k"]
-size = Vector2(63, 63)
+size = Vector2(53, 63)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_f5jp2"]
 
@@ -53,13 +117,16 @@ friction = 25.0
 
 [node name="CharSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-scale = Vector2(0.492188, 0.492188)
-sprite_frames = SubResource("SpriteFrames_skpcp")
+scale = Vector2(1.175, 1.175)
+sprite_frames = SubResource("SpriteFrames_fgs4f")
+frame = 5
 
 [node name="Collision" type="CollisionShape2D" parent="CharacterBody2D" groups=["player"]]
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_6n34k")
 
 [node name="angy1" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
 material = SubResource("CanvasItemMaterial_f5jp2")
 position = Vector2(-11.5, -4.5)
 rotation = 0.436332
@@ -67,6 +134,7 @@ scale = Vector2(0.256157, 0.055577)
 texture = SubResource("GradientTexture2D_jxc1w")
 
 [node name="angy2" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
 position = Vector2(11.5, -4.5)
 rotation = -0.436332
 scale = Vector2(0.256, 0.056)

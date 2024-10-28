@@ -1,16 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://rxut1oyiulrw"]
+[gd_scene load_steps=6 format=3 uid="uid://rxut1oyiulrw"]
 
-[ext_resource type="Texture2D" uid="uid://knte5bcv2ovw" path="res://Sprites/Enemy.png" id="1_4oqpg"]
+[ext_resource type="Texture2D" uid="uid://bfhayfg0b24fh" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Enemies/enemySpikey_1.png" id="2_vdqwc"]
 [ext_resource type="Script" path="res://entities and players/Entities/Enemies/enemy/enemy.gd" id="3_mc8yn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2y8c"]
-size = Vector2(32, 32)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hg8p"]
-size = Vector2(6, 30.6667)
+size = Vector2(6, 16.6667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixprj"]
-size = Vector2(6, 30.6667)
+size = Vector2(6, 16.6667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6on5"]
 size = Vector2(9.33333, 1.33333)
@@ -22,23 +19,25 @@ speed = 200
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="Collision" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_k2y8c")
+[node name="Collision" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(0, -4)
+polygon = PackedVector2Array(-15.3333, 20, 16, 20, 16, 2, 12.6667, -9.33333, 0, -21.3333, -12.6667, -8.66667, -16, 2, -16, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D/Collision"]
 texture_filter = 1
-texture = ExtResource("1_4oqpg")
+position = Vector2(0, 5.96046e-08)
+texture = ExtResource("2_vdqwc")
 
 [node name="Right_Collision" type="Area2D" parent="."]
 
 [node name="Right_Collision_Box" type="CollisionShape2D" parent="Right_Collision"]
-position = Vector2(-13, 0)
+position = Vector2(-13, 7.00001)
 shape = SubResource("RectangleShape2D_5hg8p")
 
 [node name="Left_Collision" type="Area2D" parent="."]
 
 [node name="Left_Collision_Box" type="CollisionShape2D" parent="Left_Collision"]
-position = Vector2(13, 0)
+position = Vector2(13, 7.00001)
 shape = SubResource("RectangleShape2D_ixprj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
