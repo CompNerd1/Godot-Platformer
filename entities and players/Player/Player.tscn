@@ -102,8 +102,10 @@ gradient = SubResource("Gradient_rudss")
 fill_from = Vector2(1, 0)
 
 [node name="Player" type="Node2D" groups=["Enemy", "player"]]
+scale = Vector2(1.175, 1.175)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Enemy", "player"]]
+position = Vector2(0, -1.5)
 script = ExtResource("1_12i1p")
 acceleration = 60.0
 max_speed = 175
@@ -114,13 +116,11 @@ friction = 25.0
 
 [node name="CharSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-scale = Vector2(1.175, 1.175)
 sprite_frames = SubResource("SpriteFrames_fgs4f")
 frame = 5
 
 [node name="Collision" type="CollisionPolygon2D" parent="CharacterBody2D" groups=["player"]]
-position = Vector2(-0.5, 0)
-polygon = PackedVector2Array(-8.5, 32, 7.5, 32, 7.5, 16, 20.5, 16, 26.5, 11, 26.5, 1, 6.5, -31, 3.5, -32, 0.5, -32, -4.5, -32, -7.5, -31, -26.5, 1, -26.5, 11, -21.5, 16, -8.5, 16)
+polygon = PackedVector2Array(-8, 27, 6, 27, 6, 13, 17, 13, 22, 9, 22, 2, 5, -26, 3, -27, -4, -27, -6, -26, -23, 1, -23, 9, -18, 13, -8, 13)
 
 [node name="angy1" type="Sprite2D" parent="CharacterBody2D"]
 visible = false

@@ -7,10 +7,12 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["player"]]
 texture_filter = 1
+position = Vector2(0, -16)
 scale = Vector2(2, 2)
 texture = ExtResource("1_wmf5y")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=["player"]]
+position = Vector2(0, -16)
 scale = Vector2(2, 2)
 build_mode = 1
 polygon = PackedVector2Array(-16, 16, -16, -4, -13, -10, -9, -14, 0, -16, 9, -14, 13, -10, 16, -4, 16, 16)
