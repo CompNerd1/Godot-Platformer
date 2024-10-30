@@ -1,17 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://vn5oqdwfpmhg"]
+[gd_scene load_steps=3 format=3 uid="uid://vn5oqdwfpmhg"]
 
 [ext_resource type="Script" path="res://Items/Pickup/Pickup.gd" id="1_fte7a"]
 [ext_resource type="Texture2D" uid="uid://cv3omr3g2wtw3" path="res://Sprites/Pickup.png" id="2_4hoxh"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gnq8x"]
-radius = 4.3
-height = 14.4
-
 [node name="Pickup" type="Area2D"]
-scale = Vector2(3, 3)
+position = Vector2(0, -16)
+scale = Vector2(4.572, 4.572)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_gnq8x")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1, 7, 1, 7, 4, 4, 4, -4, 1, -7, -1, -7, -4, -4, -4, 4)
 script = ExtResource("1_fte7a")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
