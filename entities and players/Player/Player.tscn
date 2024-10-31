@@ -105,7 +105,7 @@ fill_from = Vector2(1, 0)
 scale = Vector2(1.175, 1.175)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Enemy", "player"]]
-position = Vector2(0, -1.5)
+position = Vector2(0, -13.5)
 script = ExtResource("1_12i1p")
 acceleration = 60.0
 max_speed = 175
@@ -113,6 +113,7 @@ max_run_speed = 450
 jump_speed = 600.0
 health = 100
 friction = 25.0
+terminal_velocity = 600
 
 [node name="CharSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
