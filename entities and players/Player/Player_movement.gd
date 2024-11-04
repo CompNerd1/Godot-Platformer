@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -1
 @export var health: int
 @export var friction: float
 @export var terminal_velocity: int
+var jumptime = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -16,7 +17,15 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var knockback = false
 var run = false
 
-
+func _process(delta: float) -> void:
+	if velocity.y >= terminal_velocity * 0.75 and jumptime:
+		$CharSprite.set_frame(3);
+	if velocity.y < terminal_velocity * 0.75 and velocity.y >= terminal_velocity * 0.25:
+		$CharSprite.set_frame(1);
+	if velocity.y < terminal_velocity * 0.25:
+		$CharSprite.set_frame(14);
+	if velocity.y == 0:
+		$CharSprite.set_frame(5);
 
 func _ready() -> void:
 	Globals.health = health
@@ -41,6 +50,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Run"):
 		run = !run
 	
+	if is_on_floor():
+		jumptime = false
+	
 	# Add the gravity.
 	if not is_on_floor():
 		if(velocity.y + gravity > terminal_velocity):
@@ -51,10 +63,12 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY * jump_speed
+		$JumpTime.start();
 	
 	if Input.is_action_just_pressed("ui_accept") and !is_on_floor() and Globals.power_up:
 		velocity.y = JUMP_VELOCITY * jump_speed
 		Globals.power_up = false
+		$JumpTime.start();
 	
 	#movement
 	if not knockback:
@@ -103,3 +117,7 @@ func _physics_process(delta):
 					velocity.x += friction / 1.125
 	
 	move_and_slide()
+
+
+func _on_jump_time_timeout() -> void:
+	jumptime = true

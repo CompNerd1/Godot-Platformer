@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cungricslfdnm" path="res://Sprites/Jump_power.png" id="2_00163"]
 
 [node name="Pickup" type="Area2D"]
-position = Vector2(0, -18)
+position = Vector2(16, -18)
 scale = Vector2(2, 2)
 script = ExtResource("1_fte7a")
 
