@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgd82dolsxtjj"]
+
+[ext_resource type="TileSet" uid="uid://bxpswhc8geg7q" path="res://Best_Map.tres" id="1_gfyhm"]
+
+[node name="Level9" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Level" type="TileMapLayer" parent="TileMap"]
+tile_set = ExtResource("1_gfyhm")
+
+[node name="Entities" type="TileMapLayer" parent="TileMap"]

@@ -32,7 +32,7 @@ func _ready() -> void:
 
 func enemy_on_hit(x_velocity: float):
 	if velocity.x == 0:
-		velocity.x = (abs(x_velocity) / x_velocity) * 1000
+		velocity.x = (abs(x_velocity) / x_velocity) * 500
 		$Timer.start()
 
 func on_hit():

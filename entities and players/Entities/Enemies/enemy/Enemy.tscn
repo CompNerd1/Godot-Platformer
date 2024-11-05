@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://rxut1oyiulrw"]
+[gd_scene load_steps=8 format=3 uid="uid://rxut1oyiulrw"]
 
 [ext_resource type="Texture2D" uid="uid://bfhayfg0b24fh" path="res://Sprites/Tile set/kenney_abstract-platformer/PNG/Enemies/enemySpikey_1.png" id="2_vdqwc"]
 [ext_resource type="Script" path="res://entities and players/Entities/Enemies/enemy/enemy.gd" id="3_mc8yn"]
@@ -11,6 +11,12 @@ size = Vector2(6, 16.6667)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6on5"]
 size = Vector2(9.33333, 1.33333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjb13"]
+size = Vector2(6, 0.666666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4jwi"]
+size = Vector2(6, 0.666664)
 
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
@@ -33,22 +39,37 @@ texture = ExtResource("2_vdqwc")
 position = Vector2(0, -5.333)
 
 [node name="Right_Collision_Box" type="CollisionShape2D" parent="Right_Collision"]
-position = Vector2(-13, 7.00001)
+position = Vector2(-13, 7.66668)
 shape = SubResource("RectangleShape2D_5hg8p")
 
 [node name="Left_Collision" type="Area2D" parent="."]
 position = Vector2(0, -5.333)
 
 [node name="Left_Collision_Box" type="CollisionShape2D" parent="Left_Collision"]
-position = Vector2(13, 7.00001)
+position = Vector2(13, 7.66668)
 shape = SubResource("RectangleShape2D_ixprj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Floor" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_r6on5")
+
+[node name="No Right" type="Area2D" parent="."]
+position = Vector2(-13, 11)
+
+[node name="No Floor Right" type="CollisionShape2D" parent="No Right"]
+position = Vector2(26, -2.86102e-06)
+shape = SubResource("RectangleShape2D_sjb13")
+
+[node name="No Left" type="Area2D" parent="."]
+
+[node name="No Floor Left" type="CollisionShape2D" parent="No Left"]
+position = Vector2(-13, 11)
+shape = SubResource("RectangleShape2D_f4jwi")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Right_Collision" to="." method="_on_right_collision_body_entered"]
 [connection signal="body_entered" from="Right_Collision" to="Right_Collision/Right_Collision_Box" method="_on_right_collision_body_entered"]
 [connection signal="body_entered" from="Left_Collision" to="." method="_on_left_collision_body_entered"]
 [connection signal="body_entered" from="Left_Collision" to="Right_Collision/Right_Collision_Box" method="_on_left_collision_body_entered"]
+[connection signal="body_exited" from="No Right" to="." method="_on_no_right_body_exited"]
+[connection signal="body_exited" from="No Left" to="." method="_on_no_left_body_exited"]
