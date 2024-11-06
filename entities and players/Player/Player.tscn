@@ -115,6 +115,7 @@ terminal_velocity = 600
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_fgs4f")
 animation = &"Walk"
+frame = 5
 
 [node name="Collision" type="CollisionPolygon2D" parent="." groups=["player"]]
 polygon = PackedVector2Array(-8, 27, 6, 27, 22, 9, 22, 2, 5, -26, 3, -27, -4, -27, -6, -26, -23, 1, -23, 9)
