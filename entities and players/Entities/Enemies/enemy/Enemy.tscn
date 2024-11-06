@@ -19,6 +19,7 @@ size = Vector2(6, 0.666666)
 size = Vector2(6, 0.666664)
 
 [node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("3_mc8yn")
 speed = 200
 
