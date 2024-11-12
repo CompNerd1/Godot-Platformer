@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://bxpswhc8geg7q" path="res://Best_Map.tres" id="1_gfyhm"]
 [ext_resource type="PackedScene" uid="uid://brotugfr88pta" path="res://entities and players/Player/Player.tscn" id="2_0iauc"]
 [ext_resource type="Script" path="res://entities and players/Player/Camera_Movement.gd" id="3_y0i8p"]
-[ext_resource type="PackedScene" uid="uid://cb34nf7yyua1v" path="res://kill_box.tscn" id="4_trk6h"]
+[ext_resource type="PackedScene" path="res://kill_box.tscn" id="4_trk6h"]
 
 [node name="Level9" type="Node2D"]
 
@@ -25,7 +25,7 @@ position = Vector2(0, 324)
 script = ExtResource("3_y0i8p")
 
 [node name="Player" parent="." instance=ExtResource("2_0iauc")]
-position = Vector2(193, 533)
+position = Vector2(90, 560)
 
 [node name="KillBox" parent="." instance=ExtResource("4_trk6h")]
 position = Vector2(131, 702)

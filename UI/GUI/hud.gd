@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Ded.visible = false
@@ -16,3 +15,7 @@ func _process(delta: float) -> void:
 func _on_button_pressed() -> void:
 	Globals.power_up = false
 	get_tree().change_scene_to_file("res://UI/Level Select/LevelSelect.tscn")
+
+
+func _on_button_2_pressed() -> void:
+	get_tree().reload_current_scene()

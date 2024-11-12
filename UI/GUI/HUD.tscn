@@ -38,11 +38,20 @@ No Big Soup"
 
 [node name="Button" type="Button" parent="Ded"]
 layout_mode = 0
-offset_left = 519.0
-offset_top = 548.0
-offset_right = 639.0
-offset_bottom = 605.0
+offset_left = 759.0
+offset_top = 543.0
+offset_right = 879.0
+offset_bottom = 600.0
 theme_override_font_sizes/font_size = 24
+text = "Main Menu"
+
+[node name="Button2" type="Button" parent="Ded"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 516.0
+offset_right = 404.0
+offset_bottom = 596.0
 text = "Respawn"
 
 [connection signal="pressed" from="Ded/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Ded/Button2" to="." method="_on_button_2_pressed"]
