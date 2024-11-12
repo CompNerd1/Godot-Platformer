@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=4 uid="uid://drnt3uv5bojfl"]
+
+[ext_resource type="TileSet" uid="uid://bxpswhc8geg7q" path="res://Best_Map.tres" id="1_cgpve"]
+[ext_resource type="TileSet" uid="uid://ogpebripkuqg" path="res://tileset.tres" id="2_ax4xm"]
+[ext_resource type="Script" path="res://entities and players/Player/Camera_Movement.gd" id="3_e2o25"]
+[ext_resource type="PackedScene" uid="uid://brotugfr88pta" path="res://entities and players/Player/Player.tscn" id="4_agru1"]
+[ext_resource type="PackedScene" uid="uid://cb34nf7yyua1v" path="res://kill_box.tscn" id="5_fb5dh"]
+
+[node name="Level10" type="Node2D"]
+
+[node name="TileMap" type="Node2D" parent="."]
+
+[node name="Level" type="TileMapLayer" parent="TileMap"]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAMAAAAAAAEAAAAAAAMAAAAAAAIAAAAAAAMAAAAAAAMAAAABAAMAAAAAAAQAAAAAAAMAAAAAAAUAAAAAAAMAAAAAAAYAAAAAAAMAAAAAAAcAAAAAAAUAAAAAAAgAAAAAAAMAAAAAAAkAAAAAAAQAAAABAAMAAAACAAMAAAABAAkAAAACAAMAAAACAAMAAAACAAMAAAACAAkAAAACAAMAAAADAAMAAAACAAMAAAADAAkAAAACAAMAAAAEAAMAAAADAAMAAAAEAAkAAAACAAMAAAAFAAMAAAATAAEAAAAFAAQAAAARAAIAAAAFAAUAAAAVAAMAAAAFAAYAAAAUAAMAAAAFAAcAAAAUAAIAAAAFAAgAAAAUAAMAAAAFAAkAAAACAAMAAAAGAAMAAAABAAMAAAAGAAkAAAACAAMAAAAHAAMAAAACAAMAAAAHAAkAAAACAAMAAAAIAAMAAAACAAMAAAAIAAkAAAACAAMAAAAJAAMAAAACAAMAAAAJAAkAAAACAAMAAAAKAAMAAAACAAMAAAAKAAkAAAACAAMAAAALAAMAAAACAAMAAAALAAkAAAACAAMAAAAMAAMAAAADAAMAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAAMAAgAAAAAAAMAAAAMAAkAAAAAAAMAAAANAAkAAAACAAMAAAAOAAUAAAAHAAQAAAAOAAkAAAACAAMAAAAPAAUAAAAIAAQAAAAPAAkAAAACAAMAAAAQAAkAAAACAAMAAAARAAcAAAAHAAQAAAARAAkAAAACAAMAAAASAAcAAAAIAAQAAAASAAkAAAACAAMAAAATAAkAAAACAAMAAAAUAAkAAAACAAMAAAAVAAkAAAACAAMAAAAWAAkAAAACAAMAAAAXAAkAAAACAAMAAAAYAAkAAAACAAMAAAAZAAkAAAADAAMAAAA=")
+tile_set = ExtResource("1_cgpve")
+
+[node name="Entities" type="TileMapLayer" parent="TileMap"]
+texture_filter = 1
+tile_set = ExtResource("1_cgpve")
+
+[node name="Guide" type="TileMapLayer" parent="TileMap"]
+visible = false
+texture_filter = 1
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAAABQAAAABAAAAAAAAABMAAAABAAAAAAAAABIAAAABAAAAAAAAABEAAAABAAAAAAAAABAAAAABAAAAAAAAAA8AAAABAAAAAAAAAA4AAAABAAAAAAAAAA0AAAABAAAAAAAAAAwAAAABAAAAAAAAAAsAAAABAAAAAAAAAAoAAAABAAAAAAAAAAkAAAABAAAAAAAAAAgAAAABAAAAAAAAAAcAAAABAAAAAAAAAAYAAAABAAAAAAAAAAUAAAABAAAAAAAAAAQAAAABAAAAAAAAAAMAAAABAAAAAAAAAAIAAAABAAAAAAAAAAEAAAABAAAAAAAAAAAAAAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAA=")
+tile_set = ExtResource("2_ax4xm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 320)
+script = ExtResource("3_e2o25")
+
+[node name="Player" parent="." instance=ExtResource("4_agru1")]
+position = Vector2(91, 541)
+
+[node name="KillBox" parent="." instance=ExtResource("5_fb5dh")]
+position = Vector2(131, 702)
+
+[node name="CollisionShape2D" parent="KillBox" index="0"]
+position = Vector2(1536, 194.5)
+
+[editable path="KillBox"]

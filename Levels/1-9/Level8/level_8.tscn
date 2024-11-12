@@ -16,6 +16,13 @@ tile_set = ExtResource("2_heo4y")
 tile_map_data = PackedByteArray("AAAYABIAAQAAAAAABAAOABIAAQAAAAAAAwAbAAgAAQAAAAAAAwAXAP7/AQAAAAAAAQAaAP7/AQAAAAAAAQAcAPz/AQAAAAAAAwAHAOr/AQAAAAAAAgA=")
 tile_set = ExtResource("2_heo4y")
 
+[node name="Guide" type="TileMapLayer" parent="."]
+visible = false
+texture_filter = 1
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAAABQAAAABAAAAAAAAABMAAAABAAAAAAAAABIAAAABAAAAAAAAABEAAAABAAAAAAAAABAAAAABAAAAAAAAAA8AAAABAAAAAAAAAA4AAAABAAAAAAAAAA0AAAABAAAAAAAAAAwAAAABAAAAAAAAAAsAAAABAAAAAAAAAAoAAAABAAAAAAAAAAkAAAABAAAAAAAAAAgAAAABAAAAAAAAAAcAAAABAAAAAAAAAAYAAAABAAAAAAAAAAUAAAABAAAAAAAAAAQAAAABAAAAAAAAAAMAAAABAAAAAAAAAAIAAAABAAAAAAAAAAEAAAABAAAAAAAAAAAAAAABAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAA=")
+tile_set = ExtResource("2_heo4y")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 324)
 script = ExtResource("3_qlv33")
@@ -25,10 +32,10 @@ position = Vector2(156, 582)
 
 [connection signal="body_entered" from="Layer2/Pickup" to="Layer2/Pickup" method="_on_body_entered"]
 [connection signal="body_entered" from="Layer2/Pickup" to="Layer2/Pickup/CollisionShape2D" method="_on_pickup_body_entered"]
-[connection signal="body_entered" from="Layer2/@Area2D@66208" to="Layer2/@Area2D@66208" method="_on_body_entered"]
-[connection signal="body_entered" from="Layer2/@Area2D@66208" to="Layer2/@Area2D@66208/CollisionShape2D" method="_on_pickup_body_entered"]
+[connection signal="body_entered" from="Layer2/@Area2D@24675" to="Layer2/@Area2D@24675" method="_on_body_entered"]
+[connection signal="body_entered" from="Layer2/@Area2D@24675" to="Layer2/@Area2D@24675/CollisionShape2D" method="_on_pickup_body_entered"]
 [connection signal="body_entered" from="Layer2/spike" to="Layer2/spike/CollisionShape2D" method="_on_spike_body_entered"]
-[connection signal="body_entered" from="Layer2/@Area2D@66209" to="Layer2/@Area2D@66209/CollisionShape2D" method="_on_spike_body_entered"]
-[connection signal="body_entered" from="Layer2/@Area2D@66210" to="Layer2/@Area2D@66210" method="_on_body_entered"]
-[connection signal="body_entered" from="Layer2/@Area2D@66210" to="Layer2/@Area2D@66210/CollisionShape2D" method="_on_pickup_body_entered"]
+[connection signal="body_entered" from="Layer2/@Area2D@24676" to="Layer2/@Area2D@24676/CollisionShape2D" method="_on_spike_body_entered"]
+[connection signal="body_entered" from="Layer2/@Area2D@24677" to="Layer2/@Area2D@24677" method="_on_body_entered"]
+[connection signal="body_entered" from="Layer2/@Area2D@24677" to="Layer2/@Area2D@24677/CollisionShape2D" method="_on_pickup_body_entered"]
 [connection signal="body_entered" from="Layer2/Level End" to="Layer2/Level End/CollisionPolygon2D" method="_on_node_2d_body_entered"]

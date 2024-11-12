@@ -2,7 +2,7 @@ extends Camera2D
 
 @onready var player = get_node("../Player")
 @export var speed = 7
-var screen_size = 650
+var screen_size = 640
 var y_level
 var location
 

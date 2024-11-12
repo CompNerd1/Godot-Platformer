@@ -20,6 +20,10 @@ run/default_gravity=980.0
 
 Globals="*res://Global_Var.gd"
 
+[display]
+
+window/size/viewport_height=640
+
 [global_group]
 
 player=""

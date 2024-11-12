@@ -64,7 +64,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY * jump_speed
 		$JumpTime.start();
-	
+	#Double jump
 	if Input.is_action_just_pressed("ui_accept") and !is_on_floor() and Globals.power_up:
 		velocity.y = JUMP_VELOCITY * jump_speed
 		Globals.power_up = false
@@ -72,6 +72,7 @@ func _physics_process(delta):
 	
 	#movement
 	if not knockback:
+		#run
 		if !run:
 			if Input.is_action_pressed("ui_right"):
 				velocity.x += acceleration / 2
@@ -81,6 +82,7 @@ func _physics_process(delta):
 				velocity.x -= acceleration / 2
 				if abs(velocity.x) > max_speed:
 					velocity.x = -1 * max_speed
+		#not run
 		else:
 			if Input.is_action_pressed("ui_right"):
 				velocity.x += acceleration
