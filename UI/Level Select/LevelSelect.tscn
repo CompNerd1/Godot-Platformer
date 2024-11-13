@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://r75weilkcti3"]
+[gd_scene load_steps=13 format=3 uid="uid://r75weilkcti3"]
 
 [ext_resource type="PackedScene" uid="uid://qtq32mdfv625" path="res://UI/Level Select/Button/level_select_button.tscn" id="1_g785c"]
 [ext_resource type="PackedScene" uid="uid://emp3jya1ah41" path="res://Levels/1-9/Level1/Level_1.tscn" id="2_am7ro"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://5742bq0vec7k" path="res://Levels/1-9/Level7/level_7.tscn" id="8_1opd2"]
 [ext_resource type="PackedScene" uid="uid://cvnf0gd3lrx5a" path="res://Levels/1-9/Level8/level_8.tscn" id="9_dxxht"]
 [ext_resource type="PackedScene" uid="uid://bgd82dolsxtjj" path="res://Levels/1-9/Level9/level_9.tscn" id="10_7md44"]
+[ext_resource type="PackedScene" uid="uid://drnt3uv5bojfl" path="res://Levels/10-18/Level10/level_10.tscn" id="11_gda3c"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -20,143 +21,148 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 37.5
-offset_top = 92.0
-offset_right = 40.5
-offset_bottom = 92.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
 theme_override_constants/h_separation = 30
 theme_override_constants/v_separation = 92
 columns = 9
 
-[node name="Level_Select_Button" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "1"
 target_Level = ExtResource("2_am7ro")
 
-[node name="Level_Select_Button2" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button2" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "2"
 target_Level = ExtResource("3_c6vin")
 
-[node name="Level_Select_Button3" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button3" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "3"
 target_Level = ExtResource("4_5ce06")
 
-[node name="Level_Select_Button4" parent="GridContainer" groups=["player"] instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button4" parent="CenterContainer/GridContainer" groups=["player"] instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "4"
 target_Level = ExtResource("5_frhwr")
 
-[node name="Level_Select_Button5" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button5" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "5"
 target_Level = ExtResource("6_ohcge")
 
-[node name="Level_Select_Button6" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button6" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "6"
 target_Level = ExtResource("7_63flv")
 
-[node name="Level_Select_Button7" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button7" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "7"
 target_Level = ExtResource("8_1opd2")
 
-[node name="Level_Select_Button8" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button8" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "8"
 target_Level = ExtResource("9_dxxht")
 
-[node name="Level_Select_Button9" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button9" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "9"
 target_Level = ExtResource("10_7md44")
 
-[node name="Level_Select_Button10" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button10" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "10"
+target_Level = ExtResource("11_gda3c")
 
-[node name="Level_Select_Button11" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button11" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "11"
 
-[node name="Level_Select_Button12" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button12" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "12"
 
-[node name="Level_Select_Button13" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button13" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "13"
 
-[node name="Level_Select_Button14" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button14" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "14"
 
-[node name="Level_Select_Button15" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button15" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "15"
 
-[node name="Level_Select_Button16" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button16" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "16"
 
-[node name="Level_Select_Button17" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button17" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "17"
 
-[node name="Level_Select_Button18" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button18" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "18"
 
-[node name="Level_Select_Button19" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button19" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "19"
 
-[node name="Level_Select_Button20" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button20" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "20"
 
-[node name="Level_Select_Button21" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button21" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "21"
 
-[node name="Level_Select_Button22" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button22" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "22"
 
-[node name="Level_Select_Button23" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button23" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "23"
 
-[node name="Level_Select_Button24" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button24" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "24"
 
-[node name="Level_Select_Button25" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button25" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "25"
 
-[node name="Level_Select_Button26" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button26" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "26"
 
-[node name="Level_Select_Button27" parent="GridContainer" instance=ExtResource("1_g785c")]
+[node name="Level_Select_Button27" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "27"
 
 [node name="Level_Select_Button" parent="." instance=ExtResource("1_g785c")]
 layout_mode = 1
-offset_left = -111.0
-offset_top = -129.0
-offset_right = -18.0
-offset_bottom = -36.0
+anchors_preset = -1
+anchor_left = 0.404
+anchor_top = 0.542
+anchor_right = 0.404
+anchor_bottom = 0.542
+offset_left = 9.59198
+offset_top = -166.88
+offset_right = 102.592
+offset_bottom = -73.88
 number = "test"
 target_Level = ExtResource("2_f6obw")
