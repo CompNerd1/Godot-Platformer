@@ -32,7 +32,7 @@ position = Vector2(576, 320)
 script = ExtResource("3_e2o25")
 
 [node name="Player" parent="." instance=ExtResource("4_agru1")]
-position = Vector2(114, 556)
+position = Vector2(237, 579)
 
 [node name="KillBox" parent="." instance=ExtResource("5_fb5dh")]
 position = Vector2(91, 694)

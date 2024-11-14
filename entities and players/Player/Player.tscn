@@ -147,5 +147,14 @@ scale = Vector2(1.175, 1.175)
 [node name="JumpTime" type="Timer" parent="."]
 wait_time = 1.75
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Collision" type="CollisionPolygon2D" parent="Area2D" groups=["player"]]
+polygon = PackedVector2Array(-8, 27, 6, 27, 22, 9, 22, 2, 5, -26, 3, -27, -4, -27, -6, -26, -23, 1, -23, 9)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="JumpTime" to="." method="_on_jump_time_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

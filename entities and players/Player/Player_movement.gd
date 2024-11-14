@@ -50,6 +50,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Run"):
 		run = !run
 	
+	#Time in air reset
 	if is_on_floor():
 		jumptime = false
 	
@@ -64,6 +65,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY * jump_speed
 		$JumpTime.start();
+	
 	#Double jump
 	if Input.is_action_just_pressed("ui_accept") and !is_on_floor() and Globals.power_up:
 		velocity.y = JUMP_VELOCITY * jump_speed
@@ -73,7 +75,7 @@ func _physics_process(delta):
 	#movement
 	if not knockback:
 		#run
-		if !run:
+		if not run or (Globals.climb and not is_on_floor()):
 			if Input.is_action_pressed("ui_right"):
 				velocity.x += acceleration / 2
 				if velocity.x > max_speed:
@@ -120,6 +122,14 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-
+#time in air for sprite change
 func _on_jump_time_timeout() -> void:
 	jumptime = true
+
+#check if you are enter a physics climb (physics layer 2) tile
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	Globals.climb = true
+
+#check if you are leave a physics climb (physics layer 2) tile
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	Globals.climb = false
