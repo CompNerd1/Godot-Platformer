@@ -27,8 +27,11 @@ func _process(delta: float) -> void:
 		$CharSprite.set_frame(14)
 	if velocity.y == 0:
 		$CharSprite.set_frame(5)
-	if run and velocity.x != 0:
-		$CharSprite.set_frame(6)
+	if velocity.x != 0:
+		if run:
+			$CharSprite.set_frame(7)
+		else:
+			$CharSprite.set_frame(6)
 	else:
 		$CharSprite.set_frame(5)
 

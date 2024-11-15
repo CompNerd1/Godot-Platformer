@@ -104,7 +104,7 @@ fill_from = Vector2(1, 0)
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Enemy", "player"]]
 script = ExtResource("1_12i1p")
 acceleration = 60.0
-max_speed = 175
+max_speed = 225
 max_run_speed = 450
 jump_speed = 650.0
 health = 100
