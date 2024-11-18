@@ -63,6 +63,10 @@ func _physics_process(delta):
 	#climb
 	if Globals.climb and Input.is_action_pressed("Jump"):
 		velocity.y = climb_velocity
+	elif Globals.climb and Input.is_action_pressed("Down"):
+		velocity.y = -climb_velocity
+	elif Globals.climb:
+		velocity.y = 0
 	
 	#RUN
 	if Input.is_action_just_pressed("Run"):
@@ -73,7 +77,7 @@ func _physics_process(delta):
 		jumptime = false
 	
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and not Globals.climb:
 		if(velocity.y + gravity > terminal_velocity):
 			velocity.y = terminal_velocity
 		if(velocity.y < terminal_velocity):
