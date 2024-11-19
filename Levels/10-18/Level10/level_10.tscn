@@ -17,7 +17,7 @@ tile_set = ExtResource("1_cgpve")
 
 [node name="Entities" type="TileMapLayer" parent="TileMap"]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAJAAgAAQAAAAAAAQA=")
+tile_map_data = PackedByteArray("AAAJAAgAAQAAAAAAAQAMAP7/AQAAAAAAAwA=")
 tile_set = ExtResource("1_cgpve")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -32,5 +32,7 @@ position = Vector2(91, 694)
 
 [node name="CollisionShape2D" parent="KillBox" index="0"]
 position = Vector2(1536, 194.5)
+
+[connection signal="body_entered" from="TileMap/Entities/Level End" to="TileMap/Entities/Level End/CollisionPolygon2D" method="_on_node_2d_body_entered"]
 
 [editable path="KillBox"]

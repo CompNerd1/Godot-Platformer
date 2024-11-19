@@ -17,7 +17,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var knockback = false
 var run = false
-
+#every frame not physics
 func _process(delta: float) -> void:
 	if velocity.y >= terminal_velocity * 0.75 and jumptime:
 		$CharSprite.set_frame(3)
@@ -34,26 +34,26 @@ func _process(delta: float) -> void:
 			$CharSprite.set_frame(6)
 	else:
 		$CharSprite.set_frame(5)
-
+#start
 func _ready() -> void:
 	Globals.health = health
 	climb_velocity *= -1
-
+#when you are not moving and get hit
 func enemy_on_hit(x_velocity: float):
 	if velocity.x == 0:
 		velocity.x = (abs(x_velocity) / x_velocity) * 500
 		$Timer.start()
-
+#when you are moving and get hit
 func on_hit():
 	if velocity.x != 0:
 		velocity.x = -1 * (velocity.x / abs(velocity.x)) * 500
 	velocity.y = JUMP_VELOCITY * jump_speed * 0.75
 	knockback = true
 	$Timer.start()
-
+#allows you to move after getting his
 func _on_timer_timeout() -> void:
 	knockback = false
-
+#every frame with physics
 func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_left"):
 		$CharSprite.scale = Vector2(-1,1)
@@ -144,15 +144,12 @@ func _physics_process(delta):
 					velocity.x += friction / 1.125
 	
 	move_and_slide()
-
 #time in air for sprite change
 func _on_jump_time_timeout() -> void:
 	jumptime = true
-
 #check if you are enter a physics climb (physics layer 2) tile
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	Globals.climb = true
-
 #check if you are leave a physics climb (physics layer 2) tile
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	Globals.climb = false

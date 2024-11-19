@@ -20,6 +20,7 @@ size = Vector2(6, 0.666664)
 
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(1.5, 1.5)
+collision_layer = 0
 script = ExtResource("3_mc8yn")
 speed = 200
 
@@ -37,6 +38,7 @@ texture = ExtResource("2_vdqwc")
 
 [node name="Right_Collision" type="Area2D" parent="."]
 position = Vector2(0, -5.333)
+collision_layer = 0
 
 [node name="Right_Collision_Box" type="CollisionShape2D" parent="Right_Collision"]
 position = Vector2(-13, 7.66668)
@@ -44,23 +46,26 @@ shape = SubResource("RectangleShape2D_5hg8p")
 
 [node name="Left_Collision" type="Area2D" parent="."]
 position = Vector2(0, -5.333)
+collision_layer = 0
 
 [node name="Left_Collision_Box" type="CollisionShape2D" parent="Left_Collision"]
 position = Vector2(13, 7.66668)
 shape = SubResource("RectangleShape2D_ixprj")
 
 [node name="Floor" type="CollisionShape2D" parent="."]
-position = Vector2(0, 10)
+position = Vector2(1.03315e-06, 10)
 shape = SubResource("RectangleShape2D_r6on5")
 
 [node name="No Right" type="Area2D" parent="."]
 position = Vector2(-13, 11)
+collision_layer = 0
 
 [node name="No Floor Right" type="CollisionShape2D" parent="No Right"]
 position = Vector2(26, -2.86102e-06)
 shape = SubResource("RectangleShape2D_sjb13")
 
 [node name="No Left" type="Area2D" parent="."]
+collision_layer = 0
 
 [node name="No Floor Left" type="CollisionShape2D" parent="No Left"]
 position = Vector2(-13, 11)

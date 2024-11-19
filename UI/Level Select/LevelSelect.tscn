@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://r75weilkcti3"]
+[gd_scene load_steps=14 format=3 uid="uid://r75weilkcti3"]
 
 [ext_resource type="PackedScene" uid="uid://qtq32mdfv625" path="res://UI/Level Select/Button/level_select_button.tscn" id="1_g785c"]
 [ext_resource type="PackedScene" uid="uid://emp3jya1ah41" path="res://Levels/1-9/Level1/Level_1.tscn" id="2_am7ro"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cvnf0gd3lrx5a" path="res://Levels/1-9/Level8/level_8.tscn" id="9_dxxht"]
 [ext_resource type="PackedScene" uid="uid://bgd82dolsxtjj" path="res://Levels/1-9/Level9/level_9.tscn" id="10_7md44"]
 [ext_resource type="PackedScene" uid="uid://drnt3uv5bojfl" path="res://Levels/10-18/Level10/level_10.tscn" id="11_gda3c"]
+[ext_resource type="PackedScene" uid="uid://itj1w3pvw4a3" path="res://Levels/10-18/Level11/level_11.tscn" id="12_1xiej"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -88,6 +89,7 @@ target_Level = ExtResource("11_gda3c")
 [node name="Level_Select_Button11" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
 number = "11"
+target_Level = ExtResource("12_1xiej")
 
 [node name="Level_Select_Button12" parent="CenterContainer/GridContainer" instance=ExtResource("1_g785c")]
 layout_mode = 2
